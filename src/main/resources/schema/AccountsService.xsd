@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://com/blog/samples/webservices/accountservice" xmlns:account="http://webservices.samples.blog.com" targetNamespace="http://com/blog/samples/webservices/accountservice" elementFormDefault="qualified">
+	<xsd:complexType name="Account">
+		<xsd:sequence>
+			<xsd:element name="AccountNumber" type="xsd:string"/>
+			<xsd:element name="AccountName" type="xsd:string"/>
+			<xsd:element name="AccountBalance" type="xsd:double"/>
+			<xsd:element name="AccountStatus" type="EnumAccountStatus"/>
+		</xsd:sequence>
+	</xsd:complexType>	
+	<xsd:simpleType name="EnumAccountStatus">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Active"/>
+			<xsd:enumeration value="Inactive"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="AccountDetailsRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="accountNumber" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="AccountDetailsResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="AccountDetails" type="Account"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
