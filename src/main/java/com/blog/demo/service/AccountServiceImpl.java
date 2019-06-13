@@ -1,12 +1,12 @@
-package com.demo.service;
+package com.blog.demo.service;
 
 import org.springframework.stereotype.Service;
 
-import com.blog.samples.webservices.accountservice.Account;
-import com.blog.samples.webservices.accountservice.AccountDetailsRequest;
-import com.blog.samples.webservices.accountservice.AccountDetailsResponse;
-import com.blog.samples.webservices.accountservice.EnumAccountStatus;
-import com.blog.samples.webservices.accountservice.ObjectFactory;
+import com.blog.demo.webservices.accountservice.Account;
+import com.blog.demo.webservices.accountservice.AccountDetailsRequest;
+import com.blog.demo.webservices.accountservice.AccountDetailsResponse;
+import com.blog.demo.webservices.accountservice.EnumAccountStatus;
+import com.blog.demo.webservices.accountservice.ObjectFactory;
 
 @Service
 public class AccountServiceImpl implements AccountService {

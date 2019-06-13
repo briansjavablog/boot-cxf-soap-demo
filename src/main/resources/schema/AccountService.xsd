@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://com/blog/samples/webservices/accountservice" xmlns:account="http://webservices.samples.blog.com" targetNamespace="http://com/blog/samples/webservices/accountservice" elementFormDefault="qualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+			xmlns="http://com/blog/demo/webservices/accountservice" 
+			xmlns:account="http://webservices.demo.blog.com" 
+			targetNamespace="http://com/blog/demo/webservices/accountservice" 
+			elementFormDefault="qualified">
 	<xsd:complexType name="Account">
 		<xsd:sequence>
 			<xsd:element name="AccountNumber" type="xsd:string"/>

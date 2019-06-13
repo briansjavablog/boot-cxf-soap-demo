@@ -10,11 +10,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.blog.samples.webservices.accountservice.AccountDetailsRequest;
-import com.blog.samples.webservices.accountservice.AccountDetailsResponse;
-import com.blog.samples.webservices.accountservice.EnumAccountStatus;
-import com.blog.samples.webservices.accountservice.ObjectFactory;
-import com.briansjavablog.accounts.Accounts;
+import com.blog.demo.webservices.accountservice.AccountDetailsRequest;
+import com.blog.demo.webservices.accountservice.AccountDetailsResponse;
+import com.blog.demo.webservices.accountservice.EnumAccountStatus;
+import com.blog.demo.webservices.accountservice.ObjectFactory;
+import com.briansdevblog.accounts.AccountService;
 import com.demo.config.TestConfig;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -23,7 +23,7 @@ public class AccountServiceEndpointTest {
 	
 	@Autowired
 	@Qualifier("accountServiceClient")
-	private Accounts accountsServiceClient;
+	private AccountService accountsServiceClient;
 	private AccountDetailsRequest accountDetailsRequest;
 	
 	@Before

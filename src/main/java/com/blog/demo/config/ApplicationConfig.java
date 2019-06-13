@@ -1,4 +1,4 @@
-package com.demo.config;
+package com.blog.demo.config;
 
 import javax.xml.ws.Endpoint;
 
@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
-import com.demo.service.AccountServiceEndpoint;
+import com.blog.demo.service.AccountServiceEndpoint;
 
 @Configuration
 public class ApplicationConfig {

@@ -11,22 +11,22 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import com.briansjavablog.accounts.Accounts;
-import com.demo.service.AccountServiceEndpoint;
+import com.blog.demo.service.AccountServiceEndpoint;
+import com.briansdevblog.accounts.AccountService;
 
 @Configuration
-@ComponentScan("com.demo.service")
+@ComponentScan("com.blog.demo.service")
 public class TestConfig {
 
 	private static final String SERVICE_URL = "http://localhost:8080/services/accounts";
 	
 	@Bean("accountServiceClient")
-	public Accounts accountServiceClient() {
+	public AccountService accountServiceClient() {
 
 		JaxWsProxyFactoryBean jaxWsProxyFactoryBean = new JaxWsProxyFactoryBean();
-		jaxWsProxyFactoryBean.setServiceClass(Accounts.class);
+		jaxWsProxyFactoryBean.setServiceClass(AccountService.class);
 		jaxWsProxyFactoryBean.setAddress(SERVICE_URL);		    
-		return (Accounts) jaxWsProxyFactoryBean.create();
+		return (AccountService) jaxWsProxyFactoryBean.create();
 	}
 	
 	@Bean(name=Bus.DEFAULT_BUS_ID)
