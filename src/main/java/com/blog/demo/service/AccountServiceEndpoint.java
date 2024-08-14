@@ -1,7 +1,5 @@
 package com.blog.demo.service;
 
-import javax.jws.WebService;
-
 import org.springframework.stereotype.Service;
 
 import com.blog.demo.webservices.accountservice.Account;

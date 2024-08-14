@@ -5,15 +5,15 @@
 	<groupId>com.briansdevblog</groupId>
 	<artifactId>boot-cxf-soap-demo</artifactId>
 	<packaging>jar</packaging>	
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<properties>
-		<cxf.version>3.3.2</cxf.version>
-		<java.version>1.8</java.version>
+		<cxf.version>4.0.5</cxf.version>
+		<java.version>21</java.version>
 	</properties>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.5.RELEASE</version>
+		<version>3.3.2</version>
 	</parent>
 	<dependencies>
 		<dependency>
@@ -29,7 +29,6 @@
 	        <groupId>org.apache.cxf</groupId>
 	        <artifactId>cxf-rt-transports-http-jetty</artifactId>
 	        <version>${cxf.version}</version>
-	        <scope>test</scope>
 	    </dependency>	    
 	    <dependency>
 		    <groupId>org.apache.cxf</groupId>
@@ -45,8 +44,20 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>jakarta.xml.ws</groupId>
+			<artifactId>jakarta.xml.ws-api</artifactId>
+			<version>4.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 	<build>
+		<finalName>boot-cxf-soap-demo</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
